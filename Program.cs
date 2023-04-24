@@ -13,7 +13,7 @@ namespace POE_Part1
     {
         static void Main(string[] args)
         {
-
+            Controller.menu();
         }
     }
 
@@ -124,7 +124,7 @@ namespace POE_Part1
             addIngredients();
             addSteps();
             Recipe R1 = new Recipe(ingredients, steps);
-
+            Controller.menu();
         }
 
         public static void displayDetails()
@@ -144,6 +144,7 @@ namespace POE_Part1
             }
             Console.WriteLine("--------------------------------------------");
             Console.ReadKey();
+            Controller.menu();
 
         }
 
@@ -163,7 +164,7 @@ namespace POE_Part1
             }
             Console.WriteLine("Scale factor changed!");
             Console.ReadKey();
-            
+            Controller.menu();
         }
 
         public static void resetScaleFactor()
@@ -176,7 +177,8 @@ namespace POE_Part1
             }
             Console.WriteLine("Scale Reset!");
             Console.ReadLine();
-            
+            Controller.menu();
+
         }
 
     }
