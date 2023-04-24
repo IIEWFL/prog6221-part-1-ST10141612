@@ -59,6 +59,16 @@ namespace POE_Part1
 
     public class Step
     {
+        string description;
+        public Step(string description)
+        {
+            this.description = description;
+        }
+
+        public string display()
+        {
+            return this.description;
+        }
 
     }
 
