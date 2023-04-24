@@ -87,7 +87,7 @@ namespace POE_Part1
         {
             void addIngredients()
             {
-
+                Console.WriteLine("--------------------------------------------");
                 for (int i = 0; i < num_ing; i++)
                 {
                     Console.WriteLine("Ingredient Name: ");
@@ -102,19 +102,21 @@ namespace POE_Part1
                     ingredients.Add(ing);
 
                 }
+                Console.WriteLine("--------------------------------------------");
+                Console.WriteLine();
 
             }
 
             void addSteps()
             {
-                
+                Console.WriteLine("--------------------------------------------");
                 for (int i = 0; i < num_steps; i++)
                 {
                     Console.WriteLine("Enter step {0}/{1}", (i + 1), num_steps);
                     Step s = new Step(Console.ReadLine());
                     steps.Add(s);
                 }
-                
+                Console.WriteLine("--------------------------------------------");
                 Console.WriteLine("Details Captured!");
                 Console.ReadLine();
             }
@@ -124,7 +126,7 @@ namespace POE_Part1
             Recipe R1 = new Recipe(ingredients, steps);
 
 
-
+        
 
         }
     }
