@@ -60,6 +60,12 @@ namespace POE_Part1
     public class Step
     {
         string description;
+        public string Description
+        {
+            get { return description; }
+            set { description = value; }
+        }
+
         public Step(string description)
         {
             this.description = description;
