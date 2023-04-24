@@ -20,8 +20,26 @@ namespace POE_Part1
     public class Ingredient
     {
         string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+
         double quantity;
+        public double Quantity
+        {
+            get { return quantity; }
+            set { quantity = value; }
+        }
+
         string unit;
+        public string Unit
+        {
+            get { return unit; }
+            set { unit = value; }
+        }
 
         public Ingredient(string name, double quantity, string unit)
         {
@@ -36,4 +54,10 @@ namespace POE_Part1
             return result;
         }
     }
+
+    public class Step
+    {
+
+    }
+
 }
