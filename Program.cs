@@ -19,6 +19,8 @@ namespace POE_Part1
 
     public class Ingredient
     {
+        public static List<double> originalQuantities = new List<double>();
+       
         string name;
         public string Name
         {
