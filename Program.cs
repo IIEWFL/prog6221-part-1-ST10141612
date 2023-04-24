@@ -179,6 +179,56 @@ namespace POE_Part1
             
         }
 
+    }
+
+    public class Controller
+    {
+
+        public static void menu()
+        {
+            Console.Clear();
+            Console.WriteLine("Welcome to Recipe Wizard");
+            Console.WriteLine();
+            Console.WriteLine("1.Add a new recipe\n2.Display Recipe Details\n3.Change Scale Factor\n4.Reset Scale Factor\n5. Exit");
+            Console.WriteLine();
+
+            int prompt = Convert.ToInt32(Console.ReadLine());
+
+            switch (prompt)
+            {
+                case 1:
+                    Console.Clear();
+                    Console.WriteLine("How many ingredients in the recipe?");
+                    int num_ing = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("How many steps in the recipe?");
+                    int num_steps = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine();
+                    Recipe.createRecipe(num_ing, num_steps);
+                    break;
+
+                case 2:
+                    Recipe.displayDetails();
+                    break;
+
+                case 3:
+                    Recipe.changeScaleFactor();
+                    break;
+
+                case 4:
+                    Recipe.resetScaleFactor();
+                    break;
+
+                case 5:
+                    Environment.Exit(0);
+                    break;
+
+            }
+
+        }
+
 
     }
+
+
 }
+
