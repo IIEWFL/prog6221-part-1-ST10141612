@@ -20,7 +20,7 @@ namespace POE_Part1
     public class Ingredient
     {
         public static List<double> originalQuantities = new List<double>();
-       
+
         string name;
         public string Name
         {
@@ -87,7 +87,7 @@ namespace POE_Part1
         {
             void addIngredients()
             {
-               
+
                 for (int i = 0; i < num_ing; i++)
                 {
                     Console.WriteLine("Ingredient Name: ");
@@ -102,9 +102,30 @@ namespace POE_Part1
                     ingredients.Add(ing);
 
                 }
-                
+
             }
+
+            void addSteps()
+            {
+                
+                for (int i = 0; i < num_steps; i++)
+                {
+                    Console.WriteLine("Enter step {0}/{1}", (i + 1), num_steps);
+                    Step s = new Step(Console.ReadLine());
+                    steps.Add(s);
+                }
+                
+                Console.WriteLine("Details Captured!");
+                Console.ReadLine();
+            }
+
+            addIngredients();
+            addSteps();
+            Recipe R1 = new Recipe(ingredients, steps);
+
 
 
 
         }
+    }
+}
