@@ -147,6 +147,38 @@ namespace POE_Part1
 
         }
 
+        public Recipe(List<Ingredient> ing, List<Step> st)
+        {
+            ingredients = ing;
+            steps = st;
+        }
+
+        public static void changeScaleFactor()
+        {
+            Console.WriteLine("Select the scale factor (x0.5,x2,x3...etc)");
+            double scale = Convert.ToDouble(Console.ReadLine());
+            foreach (Ingredient i in ingredients)
+            {
+                i.Quantity = i.Quantity * scale;
+            }
+            Console.WriteLine("Scale factor changed!");
+            Console.ReadKey();
+            
+        }
+
+        public static void resetScaleFactor()
+        {
+            int index = 0;
+            foreach (Ingredient i in ingredients)
+            {
+                i.Quantity = Ingredient.originalQuantities[index];
+                index++;
+            }
+            Console.WriteLine("Scale Reset!");
+            Console.ReadLine();
+            
+        }
+
 
     }
 }
