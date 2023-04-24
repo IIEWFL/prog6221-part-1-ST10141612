@@ -157,10 +157,11 @@ namespace POE_Part1
         public static void changeScaleFactor()
         {
             Console.WriteLine("Select the scale factor (x0.5,x2,x3...etc)");
-            double scale = Convert.ToDouble(Console.ReadLine());
+            string input = Console.ReadLine();
+            var factor = Convert.ToDouble(input);
             foreach (Ingredient i in ingredients)
             {
-                i.Quantity = i.Quantity * scale;
+                i.Quantity *=  factor;
             }
             Console.WriteLine("Scale factor changed!");
             Console.ReadKey();
