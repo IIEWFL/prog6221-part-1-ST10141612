@@ -125,9 +125,28 @@ namespace POE_Part1
             addSteps();
             Recipe R1 = new Recipe(ingredients, steps);
 
+        }
 
-        
+        public static void displayDetails()
+        {
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("Ingredients:");
+            foreach (Ingredient i in Recipe.ingredients)
+            {
+                Console.WriteLine(i.display());
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Steps:");
+            foreach (Step s in Recipe.steps)
+            {
+                Console.WriteLine(s.display());
+            }
+            Console.WriteLine("--------------------------------------------");
+            Console.ReadKey();
 
         }
+
+
     }
 }
