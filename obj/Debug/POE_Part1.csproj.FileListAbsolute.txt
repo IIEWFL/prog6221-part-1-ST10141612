@@ -1,0 +1,8 @@
+C:\Users\user\source\repos\POE_Part1\bin\Debug\POE_Part1.exe.config
+C:\Users\user\source\repos\POE_Part1\bin\Debug\POE_Part1.exe
+C:\Users\user\source\repos\POE_Part1\bin\Debug\POE_Part1.pdb
+C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.exe
+C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.pdb
