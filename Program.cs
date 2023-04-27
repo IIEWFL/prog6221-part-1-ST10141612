@@ -21,8 +21,9 @@ namespace POE_Part1
 
     public class Ingredient
     {
-        public static double[] originalQuantities;
+        public static double[] originalQuantities; // Array to hold the original quantities of the ingredients
 
+        //Declarations of the fields of the ingredient class, as well as access modifier methods
         string name;
         public string Name
         {
@@ -45,14 +46,14 @@ namespace POE_Part1
             set { unit = value; }
         }
 
-        public Ingredient(string name, double quantity, string unit)
+        public Ingredient(string name, double quantity, string unit) //Ingredient object constructor
         {
             this.name = name;
-            this.quantity = quantity;
+            this.quantity = quantity;  
             this.unit = unit;
         }
 
-        public string display()
+        public string display() //Displays the details of the ingredient in string form
         {
             string result = this.quantity.ToString() + " " + this.unit + " " + this.name;
             return result;
@@ -61,6 +62,7 @@ namespace POE_Part1
 
     public class Step
     {
+        //Declarations of the fields of the Step class, as well as access modifier methods
         string description;
         public string Description
         {
@@ -68,12 +70,12 @@ namespace POE_Part1
             set { description = value; }
         }
 
-        public Step(string description)
+        public Step(string description) //Step object constructor
         {
             this.description = description;
         }
 
-        public string display()
+        public string display() //Displays the details of the step object in string form
         {
             return this.description;
         }
@@ -82,16 +84,17 @@ namespace POE_Part1
 
     public class Recipe
     {
+        // A recipe contains an array of ingredients an array of steps
         public static Ingredient[] ingredients;
         public static Step[] steps;
 
-        public static void createRecipe(int num_ing, int num_steps)
+        public static void createRecipe(int num_ing, int num_steps) // Method that creates a recipe object by first creating ingredient and step objects
         {
             ingredients = new Ingredient[num_ing];
             steps = new Step[num_steps];
-            Ingredient.originalQuantities = new double[num_ing];
+            Ingredient.originalQuantities = new double[num_ing]; // Initializing Arrays after getting the number of ingredients and steps
 
-            void addIngredients()
+            void addIngredients() // Creates an ingredient object and adds it to the list of ingredients
             {
                 Console.WriteLine("--------------------------------------------");
                 for (int i = 0; i < num_ing; i++)
@@ -114,7 +117,7 @@ namespace POE_Part1
 
             }
 
-            void addSteps()
+            void addSteps() // Creates a step object and adds it to the list of steps
             {
                 Console.WriteLine("--------------------------------------------");
                 for (int i = 0; i < num_steps; i++)
@@ -130,11 +133,11 @@ namespace POE_Part1
 
             addIngredients();
             addSteps();
-            Recipe R1 = new Recipe(ingredients, steps);
-            Controller.menu();
+            Recipe R1 = new Recipe(ingredients, steps); // Creates a recipe using the information collected
+            Controller.menu(); // Opens menu
         }
 
-        public static void displayDetails()
+        public static void displayDetails() // Displays all the details of the recipe
         {
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("Ingredients:");
@@ -155,19 +158,19 @@ namespace POE_Part1
 
         }
 
-        public Recipe(Ingredient[] ing, Step[] st)
+        public Recipe(Ingredient[] ing, Step[] st) // Recipe object constructor
         {
             ingredients = ing;
             steps = st;
         }
 
-        public static void changeScaleFactor()
+        public static void changeScaleFactor() // Method scale the  recipe quantities by a factor
         {
             Console.WriteLine("Select the scale factor (x0.5,x2,x3...etc)");
-            double factor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double factor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture); // Converting string input to double
             foreach (Ingredient i in ingredients)
             {
-                i.Quantity *=  factor;
+                i.Quantity *=  factor; // Changing the quantity value by a factor
             }
             Console.WriteLine("Scale factor changed!");
             Console.ReadKey();
@@ -176,6 +179,7 @@ namespace POE_Part1
 
         public static void resetScaleFactor()
         {
+            // This method sets the quantity values to the values stored in the "originalQuantities" array
             int index = 0;
             foreach (Ingredient i in ingredients)
             {
