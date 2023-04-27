@@ -6,3 +6,6 @@ C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.csproj.SuggestedBinding
 C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.exe
 C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.pdb
+C:\Users\user\source\repos\POE_Part1\bin\Debug\Ninject.dll
+C:\Users\user\source\repos\POE_Part1\bin\Debug\Ninject.xml
+C:\Users\user\source\repos\POE_Part1\obj\Debug\POE_Part1.csproj.CopyComplete

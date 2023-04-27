@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
 
 namespace POE_Part1
 {
@@ -157,8 +159,7 @@ namespace POE_Part1
         public static void changeScaleFactor()
         {
             Console.WriteLine("Select the scale factor (x0.5,x2,x3...etc)");
-            string input = Console.ReadLine();
-            var factor = Convert.ToDouble(input);
+            double factor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             foreach (Ingredient i in ingredients)
             {
                 i.Quantity *=  factor;
