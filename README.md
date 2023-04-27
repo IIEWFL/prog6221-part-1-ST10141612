@@ -2,11 +2,11 @@
 
 # 1. The user shall be able to enter the details for a single recipe
 
-a. The number of ingredients.
+a. The number of ingredients.  
 b. For each ingredient: the name, quantity, and unit of measurement. For example, one
-tablespoon of sugar.
-c. The number of steps.
-d. For each step: a description of what the user should do.
+tablespoon of sugar.  
+c. The number of steps.  
+d. For each step: a description of what the user should do.  
 
 # 2. The software displays the full recipe, including the ingredients and steps, in a neat format to the user
 
