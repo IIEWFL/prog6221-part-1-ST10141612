@@ -21,7 +21,7 @@ namespace POE_Part1
 
     public class Ingredient
     {
-        public static List<double> originalQuantities = new List<double>();
+        public static double[] originalQuantities;
 
         string name;
         public string Name
@@ -82,11 +82,15 @@ namespace POE_Part1
 
     public class Recipe
     {
-        public static List<Ingredient> ingredients = new List<Ingredient>();
-        public static List<Step> steps = new List<Step>();
+        public static Ingredient[] ingredients;
+        public static Step[] steps;
 
         public static void createRecipe(int num_ing, int num_steps)
         {
+            ingredients = new Ingredient[num_ing];
+            steps = new Step[num_steps];
+            Ingredient.originalQuantities = new double[num_ing];
+
             void addIngredients()
             {
                 Console.WriteLine("--------------------------------------------");
@@ -96,12 +100,13 @@ namespace POE_Part1
                     string name = Console.ReadLine();
                     Console.WriteLine("Quantity: ");
                     double quantity = Convert.ToDouble(Console.ReadLine());
-                    Ingredient.originalQuantities.Add(quantity);
+                    Ingredient.originalQuantities[i] = quantity;
                     Console.WriteLine("Unit of Measure: ");
                     string unit = Console.ReadLine();
                     Console.WriteLine();
                     Ingredient ing = new Ingredient(name, quantity, unit);
-                    ingredients.Add(ing);
+                    ingredients[i] = ing;
+                    
 
                 }
                 Console.WriteLine("--------------------------------------------");
@@ -116,7 +121,7 @@ namespace POE_Part1
                 {
                     Console.WriteLine("Enter step {0}/{1}", (i + 1), num_steps);
                     Step s = new Step(Console.ReadLine());
-                    steps.Add(s);
+                    steps[i] = s;
                 }
                 Console.WriteLine("--------------------------------------------");
                 Console.WriteLine("Details Captured!");
@@ -150,7 +155,7 @@ namespace POE_Part1
 
         }
 
-        public Recipe(List<Ingredient> ing, List<Step> st)
+        public Recipe(Ingredient[] ing, Step[] st)
         {
             ingredients = ing;
             steps = st;
